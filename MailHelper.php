@@ -39,7 +39,7 @@ class MailHelper
         return false;
     }
 
-    public static function isEmailSent(array $messages, array $attributes = [])
+    public static function isMessageSent(array $messages, array $attributes = [])
     {
         foreach($messages as $message)
         {
