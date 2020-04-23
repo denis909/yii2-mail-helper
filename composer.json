@@ -1,0 +1,8 @@
+{
+    "name": "denis909/yii2-mail-helper",
+    "autoload": {
+        "psr-4": {
+            "denis909\\yii\\" : ""
+        }
+    }
+}
