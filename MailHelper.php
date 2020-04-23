@@ -52,19 +52,21 @@ class MailHelper
             {
                 $subject = ArrayHelper::getValue($attributes, 'subject');
 
-                if (!$subject || ($subject != $message->getSubject()))
+                if ($subject && ($subject != $message->getSubject()))
                 {
                     continue;
                 }
 
-                $toEmail = ArrayHelper::getValue($attributes, 'toEmail');
+                $toEmail = ArrayHelper::getValue($attributes, 'email');
 
-                $toName = ArrayHelper::getValue($attributes, 'toName');
+                $toName = ArrayHelper::getValue($attributes, 'name');
 
                 if (!static::hasRecipient($message, $toEmail, $toName))
                 {
                     continue;
                 }
+
+                return true;
             }
             else
             {
