@@ -57,9 +57,9 @@ class MailHelper
                     continue;
                 }
 
-                $toEmail = ArrayHelper::getValue($attributes, 'email');
+                $toEmail = ArrayHelper::getValue($attributes, 'toEmail');
 
-                $toName = ArrayHelper::getValue($attributes, 'name');
+                $toName = ArrayHelper::getValue($attributes, 'toName');
 
                 if (!static::hasRecipient($message, $toEmail, $toName))
                 {
